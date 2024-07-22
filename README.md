@@ -17,7 +17,7 @@ Before running the code, ensure you set the appropriate parameters and paths in 
 - MOON (Qinbin Li et al., 2021) [Model-Contrastive Federated Learning](https://arxiv.org/abs/2103.16257)
 
 ## Model
-We used the [Efficientnet-B3](https://arxiv.org/pdf/1905.11946) model in this experiment.
+We used the [Efficientnet-B3](https://arxiv.org/pdf/1905.11946) model in this experiment. Our final trained model is available at https://drive.google.com/file/d/195iMk_cuWJ-hlY5_sHSU8fjWDIOc5nqq/view?usp=sharing
 
 ## Datasets
 We have used datasets from the following sources:
