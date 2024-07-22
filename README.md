@@ -31,3 +31,30 @@ Spanhol, F. A., Oliveira, L. S., Petitjean, C., & Heutte, L. (2016). A Dataset f
 
 ## Metrics
 - Area under ROC
+
+## How to Run
+
+### Server Initialization
+
+1. Open `Server_FedAveraging.ipynb`.
+2. Set the paths for `base_weight_dir` and `base_log_dir`.
+3. For the first iteration (`i = 0`), run up to the 5th cell of the notebook. This will initialize the base model named `avg0.pth` in the specified path.
+
+### Client Training
+
+1. Open each client notebook (e.g., `FedImp_*1.ipynb`, `FedImp_*2.ipynb`, etc.).
+2. Set `i = 0` (as this is the first round).
+3. Set all the required paths in each client notebook.
+4. Run the complete client notebook.
+5. At the end of each client notebook, you will find a print statement displaying the "Distance from global - [dataset on which model trained]". For example, in `FedImp_BRACS1.ipynb`, you might see `Distance from global - BRACS = 0.001323`.
+
+### Server Averaging
+
+1. Copy the distance value from each client notebook.
+2. In `Server_FedAveraging.ipynb`, set the respective `c` variable for each client. For example, for `BRACS1`, set `c1 = 1 / 0.001323`.
+3. Repeat this for the other client notebooks.
+4. Increase the `i` value by 1 in the server notebook.
+5. Run the entire server notebook.
+
+Repeat the above steps for each round of federated learning.
+
